@@ -1,0 +1,3 @@
+<list />
+<my-camera isTakingPhoto='{{isTakingPhoto}}' id='my-camera'></my-camera>
+<button bindtap='open'>打开相机</button>

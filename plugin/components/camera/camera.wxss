@@ -1,0 +1,58 @@
+/* plugin/components/camera/camera.wxss */
+
+/* 摄像头 start */
+
+.camera {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.show-photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.take-photo-action {
+  position: absolute;
+  width: 100%;
+  height: 100rpx;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.take-photo-action>cover-view {
+  position: absolute;
+  top: 50%;
+}
+
+.take-photo-action-left {
+  left: 16.666%;
+  transform: translate(-50%, -50%);
+}
+
+.take-photo-action-center {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.take-photo-action-right {
+  right: 16.666%;
+  transform: translate(50%, -50%);
+}
+
+.take-photo-action-change {
+  position: absolute;
+  top: 50rpx;
+  right: 50rpx;
+}
+
+/* 摄像头 end */

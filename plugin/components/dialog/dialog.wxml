@@ -1,0 +1,15 @@
+<!--components/dialog.wxml-->
+<!-- 分享模态框 start -->
+<!-- <view class='confirm-model' wx:if="{{showConfirmModel}}"> -->
+<view class='confirm-model' wx:if="{{showConfirmModel}}">
+  <view class='confirm-model-inner'>
+    <view class='confirm-model-title'>{{title}}</view>
+    <view class='confirm-model-content'>{{content}}</view>
+    <view class='confirm-model-action'>
+      <view class='cancel' bindtap='_cancelEvent'>{{cancelText}}</view>
+      <!-- <button class='confirm' open-type="share" data-from="model">{{confirmText}}</button> -->
+      <view class='confirm' bindtap='_confirmEvent'>{{confirmText}}</view>
+    </view>
+  </view>
+</view>
+<!-- 分享模态框 end -->

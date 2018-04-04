@@ -1,0 +1,65 @@
+/* components/dialog.wxss */
+
+/* 分享模态框 start */
+
+.confirm-model {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+}
+
+.confirm-model-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600rpx;
+  /* height: 276rpx; */
+  background-color: #fff;
+}
+
+.confirm-model-title {
+  font-size: 36rpx;
+  margin-top: 42rpx;
+  color: #000;
+  text-align: center;
+}
+
+.confirm-model-content {
+  margin: 25rpx 0 47rpx;
+  padding: 0 10rpx;
+  font-size: 26rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #999;
+}
+
+.confirm-model-action {
+  display: flex;
+  height: 94rpx;
+  line-height: 94rpx;
+  border-top: 1rpx solid #e5e5e6;
+}
+
+.confirm-model-action .cancel, .confirm-model-action .confirm {
+  width: 50%;
+  text-align: center;
+}
+
+.confirm-model-action .confirm {
+  border-left: 1rpx solid #e5e5e6;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.confirm-model-action .confirm::after {
+  border: none;
+}
+
+/* 分享模态框 end */

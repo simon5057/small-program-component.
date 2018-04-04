@@ -1,0 +1,8 @@
+{
+  "publicComponents": {
+    "list": "components/list/list",
+    "dialog": "components/dialog/dialog",
+    "camera": "components/camera/camera"
+  },
+  "main": "index.js"
+}

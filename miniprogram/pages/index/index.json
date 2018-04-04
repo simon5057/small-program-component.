@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "list": "plugin://myPlugin/list",
+    "dialog": "plugin://myPlugin/dialog",
+    "my-camera": "plugin://myPlugin/camera"
+  }
+}

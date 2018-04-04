@@ -1,0 +1,15 @@
+<!--plugin/components/camera/camera.wxml-->
+<!-- 摄像头 start -->
+<view hidden="{{!isTakingPhoto}}">
+  <camera class='.camera' device-position="{{devicePosition?'front':'back'}}" flash="{{flash}}" catchstop="cameraStop" catcherror="cameraDeniedForUser">
+     <cover-image class='show-photo' src="{{tempFilePaths}}" mode="aspecFill" hidden="{{!isShowPhoto}}"></cover-image> 
+    <cover-view class='take-photo-action'>
+      <cover-view class='take-photo-action-left' catchtap="cancalPhotograph" hidden="{{isShowPhoto}}">不拍了</cover-view>
+      <cover-view class='take-photo-action-left' catchtap="rephotograph" hidden="{{!isShowPhoto}}">重拍</cover-view>
+      <cover-view class='take-photo-action-center' catchtap="takePhotos" hidden="{{isShowPhoto}}">拍照</cover-view>
+      <cover-view class='take-photo-action-right' catchtap='confirmPhotograph' hidden="{{!isShowPhoto}}">确定</cover-view>
+    </cover-view>
+    <cover-view class='take-photo-action-change' catchtap='changeCamera' hidden="{{isShowPhoto}}">切换摄像头</cover-view>
+  </camera>
+</view>
+<!-- 摄像头 end -->
