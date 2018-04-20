@@ -1,0 +1,22 @@
+<!--plugin/components/share-modal/share-modal.wxml-->
+
+<!-- 分享框 start -->
+<view class='share-modal-wrap' wx:if="{{showSharemodal}}" catchtap='hideSharemodal' catchtouchmove='preventMove'>
+  <view class='share-modal {{showSharemodal?"show-share-modal":""}}'>
+    <view class='share-modal-top'>
+      <button class='share-modal-item' open-type="share" data-from="modal">
+        <image class='share-modal-icon' src='../../images/share-modal/share.png'></image>
+        <text class='share-modal-text'>{{shareText}}</text>
+        <image class='right-arrow' src='../../images/share-modal/right-arrow.png'></image>
+      </button>
+      <view class='share-modal-item' catchtap='toSharePage'>
+        <!-- <view class='share-modal-item' catchtap='toSharePage' wx:if="{{ShowQrCode}}"> -->
+        <image class='share-modal-icon' src='{{circleStyle?"../../images/share-modal/circle.png":"../../images/share-modal/qrcode.png"}}'></image>
+        <text class='share-modal-text'>{{circleText}}</text>
+        <image class='right-arrow' src='../../images/share-modal/right-arrow.png'></image>
+      </view>
+    </view>
+    <view class='share-modal-cancel' catchtap='hideSharemodal'>取消</view>
+  </view>
+</view>
+<!-- 分享框 end -->

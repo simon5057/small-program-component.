@@ -1,7 +1,11 @@
 {
+  "componentGenerics": {
+    "selectable": true
+  },
   "usingComponents": {
-    "list": "plugin://myPlugin/list",
     "dialog": "plugin://myPlugin/dialog",
-    "my-camera": "plugin://myPlugin/camera"
+    "my-camera": "plugin://myPlugin/camera",
+    "share-modal": "plugin://myPlugin/share-modal",
+    "show-list": "plugin://myPlugin/show-list"
   }
 }

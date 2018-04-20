@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom: 100rpx;
 }
 
 .show-photo {
@@ -23,36 +23,146 @@
   width: 100%;
   height: 100rpx;
   bottom: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
 
-.take-photo-action>cover-view {
+.take-photo-action>view {
   position: absolute;
   top: 50%;
 }
 
-.take-photo-action-left {
+.take-photo-action-cancal, .take-photo-action-rephoto {
   left: 16.666%;
   transform: translate(-50%, -50%);
 }
 
-.take-photo-action-center {
+.take-photo-action-take {
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.take-photo-action-right {
+.take-photo-action-confirm, .take-photo-action-change {
   right: 16.666%;
   transform: translate(50%, -50%);
 }
 
-.take-photo-action-change {
-  position: absolute;
-  top: 50rpx;
-  right: 50rpx;
+/* 摄像头 end */
+
+/* 图标字体 start */
+
+.icon {
+  height: 40rpx;
+  width: 40rpx;
+  display: block;
+  position: relative;
+  /* background-color: #fff; */
 }
 
-/* 摄像头 end */
+.icon-backout {
+  transform: rotate(45deg);
+}
+
+.icon-backout::before {
+  content: '';
+  height: 0;
+  width: 0;
+  display: block;
+  border: 12rpx transparent solid;
+  border-left-width: 0;
+  border-right-color: #333;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.icon-backout::after {
+  content: '';
+  height: 25rpx;
+  width: 14rpx;
+  display: block;
+  border-bottom: 5rpx #333 solid;
+  border-right: 5rpx #333 solid;
+  border-radius: 0 0 20rpx 0;
+  position: absolute;
+  bottom: 10rpx;
+  left: 12rpx;
+}
+
+.icon-confirm::after, .icon-confirm::before {
+  content: '';
+  height: 32rpx;
+  width: 10rpx;
+  display: block;
+  background: #333;
+  position: absolute;
+  top: 6rpx;
+  left: 18rpx;
+  transform: rotate(45deg);
+}
+
+.icon-confirm::before {
+  height: 16rpx;
+  transform: rotate(-45deg);
+  top: 18rpx;
+  left: 6rpx;
+}
+
+.icon-circle {
+  border-radius: 20rpx;
+  background: #333;
+}
+
+.icon-sync {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 3rpx solid;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  margin: 6rpx;
+}
+
+.icon-sync::after, .icon-sync::before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 9rpx;
+  border-style: solid;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  /* border-top-color: #ccc; */
+}
+
+.icon-sync::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  right: -10rpx;
+  top: 0;
+}
+
+.icon-sync::after {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  left: -10rpx;
+  bottom: 0;
+}
+
+.icon-error::before, .icon-error::after {
+  content: '';
+  height: 12rpx;
+  width: 40rpx;
+  display: block;
+  background: #333;
+  position: absolute;
+  top: 15rpx;
+  left: 1rpx;
+  transform: rotate(-45deg);
+}
+
+.icon-error::after {
+  transform: rotate(45deg);
+}
+
+/* 图标字体 end */

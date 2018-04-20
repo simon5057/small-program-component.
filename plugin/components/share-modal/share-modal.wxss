@@ -1,0 +1,83 @@
+/* plugin/components/share-modal/share-modal.wxss */
+
+/* 分享框 start */
+
+.share-modal-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.share-modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* height: 310rpx; */
+  background-color: #fff;
+  border-top: 1rpx solid #ddd;
+  transform: translateY(100%);
+  transition: all 0.35s;
+}
+
+.share-modal.show-share-modal {
+  transform: translateY(0);
+}
+
+.share-modal-top {
+  padding: 0 30rpx;
+}
+
+.share-modal-item {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #ececec;
+}
+
+button.share-modal-item {
+  padding: 0;
+  background-color: transparent;
+  text-align: left;
+}
+
+button.share-modal-item::after {
+  border: none;
+}
+
+.share-modal-icon {
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 30rpx;
+}
+
+.share-modal-text {
+  flex: 1;
+  font-size: 32rpx;
+  color: #3e3e3e;
+}
+
+.right-arrow {
+  width: 10rpx;
+  height: 20rpx;
+  margin-right: 5rpx;
+}
+
+.share-modal-cancel {
+  height: 80rpx;
+  border-top: 10rpx solid #e8e9eb;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #3e3e3e;
+}
+
+/* .share-modal-cancel::before {
+  height: 10rpx;
+  background-color: #e8e9eb;
+} */
+
+/* 分享框 end */

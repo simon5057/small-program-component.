@@ -1,24 +1,63 @@
 var plugin = requirePlugin("myPlugin")
 Page({
   data: {
-    isTakingPhoto: false
+    isTakingPhoto: false,
+    arr: [
+      {
+        avatarurl: '../../images/show-list/avatar.jpg',
+        nickname: '泪愿尝1',
+        create_time: '2018-4-4'
+      },
+      {
+        avatarurl: '../../images/show-list/avatar.jpg',
+        nickname: '泪愿尝1',
+        create_time: '2018-4-4'
+      },
+      {
+        avatarurl: '../../images/show-list/avatar.jpg',
+        nickname: '泪愿尝1',
+        create_time: '2018-4-4'
+      },
+      {
+        avatarurl: '../../images/show-list/avatar.jpg',
+        nickname: '泪愿尝',
+        create_time: '2018-4-4'
+      },
+      {
+        avatarurl: '../../images/show-list/avatar.jpg',
+        nickname: '泪愿尝',
+        create_time: '2018-4-4'
+      },
+      {
+        avatarurl: '../../images/show-list/avatar.jpg',
+        nickname: '泪愿尝',
+        create_time: '2018-4-4'
+      },
+      {
+        avatarurl: '../../images/show-list/avatar.jpg',
+        nickname: '泪愿尝',
+        create_time: '2018-4-4'
+      },
+    ]
   },
-  onLoad: function() {
+  onLoad: function () {
     console.log(plugin);
-    // let camera = this.selectComponent("#in-camera");
-    // console.log(camera)
-    // this.camera.openCamera();
   },
-  onReady: function() {
+  onReady: function () {
 
-    let camera = this.selectComponent("my-camera");
-    console.log(camera)
   },
   open() {
-    let camera = this.selectComponent("#my-camera");
-    console.log(camera);
     this.setData({
-      isTakingPhoto:true
+      isTakingPhoto: true
     })
+  },
+  confirmPhoto(e) {
+    this.setData({
+      isTakingPhoto: false
+    })
+    console.log(e);
+  },
+  test() {
+    console.log(1)
   }
 })

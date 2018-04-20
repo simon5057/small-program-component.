@@ -1,0 +1,31 @@
+<!--plugin/components/show-list/show-list.wxml-->
+<!-- 显示用户收听次数模态框 start -->
+<!-- <view class='show-listener-wrap' wx:if="{{showListenerList}}">  -->
+<view class='show-listener-wrap' catchtouchmove="preventMove" wx:if="{{showListModal}}">
+  <view class='show-listener'>
+    <view class='show-listener-title'>{{title}}</view>
+    <scroll-view class='show-listener-list-wrap' scroll-y bindscrolltolower="_showMore">
+      <view class='show-listener-list' wx:for='{{list}}' wx:key>
+        <view class='listener-item'>
+          <view class='listener-left'>
+            <!-- <image src='{{item.avatarurl}}'></image>
+            <view class='listener-name'>{{item.nickname}}</view> -->
+            <image src='{{item.u_info.avatarurl}}'></image>
+            <view class='listener-name'>{{item.u_info.nickname}}</view>
+          </view>
+          <view class='listener-time'>{{item.create_time}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <image class='close-listener' src='../../images/show-list/return.png' catchtap='_hideList'></image>
+</view>
+<!-- 显示用户收听次数模态框 end -->
+
+<!-- 用法
+  title  列表标题
+  list   列表数据
+  bind:showMore  列表触底时的回调
+  bind:hideList  隐藏列表时的回调
+ -->
+<!-- <show-list id='showList' title='{{audienceListTitle}}' list='{{audienceList}}' bind:showMore='showMoreAudience' bind:hideList="hideAudienceList"></show-list> -->

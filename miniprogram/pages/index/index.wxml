@@ -1,3 +1,6 @@
-<list />
-<my-camera isTakingPhoto='{{isTakingPhoto}}' id='my-camera'></my-camera>
-<button bindtap='open'>打开相机</button>
+<!-- <share-modal></share-modal> -->
+<show-list
+  title='通话标题'
+  list='{{arr}}'
+  bindshowMore='test'
+></show-list>

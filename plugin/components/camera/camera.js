@@ -1,14 +1,14 @@
 // plugin/components/camera/camera.js
 Component({
-  options: {
-    multipleSlots: true // 在组件定义时的选项中启用多slot支持
-  },
+  // options: {
+  //   multipleSlots: true // 在组件定义时的选项中启用多slot支持
+  // },
   /**
    * 组件的属性列表
    */
   properties: {
     isTakingPhoto: {
-      type: Boolean,
+      type: Boolean,  // 是否处于拍照
       value: false
     },
   },
@@ -19,9 +19,9 @@ Component({
   data: {
     devicePosition: true, // 前置摄像头true,后置摄像头false,
     flash: 'auto', // 相机闪光灯 auto on off
-    // isTakingPhoto: false, // 是否处于拍照
     isShowPhoto: false, // 是否处于拍摄图片后的展示状态
-    tempFilePaths: ''
+    tempFilePath: '',
+    camera: null
   },
 
   /**
@@ -31,14 +31,16 @@ Component({
     // 拍照
     takePhotos() {
       console.log('拍照');
-      let camera = wx.createCameraContext('myCamera');
-      camera.takePhoto({
+      this.setData({
+        camera: wx.createCameraContext('myCamera')
+      });
+      this.data.camera.takePhoto({
         quality: 'high',
         success: (res) => {
           console.log(res);
           this.setData({
             isShowPhoto: true,
-            tempFilePaths: res.tempImagePath
+            tempFilePath: res.tempImagePath
           })
         }
       })
@@ -72,21 +74,20 @@ Component({
         isTakingPhoto: true,
       })
     },
-    // 确定拍照
-    confirmPhotograph() {
-      console.log('确定')
+    // 确定拍照 （将文件路径当参数传出）
+    _confirmPhotograph() {
+      console.log('确定');
+      this.triggerEvent("confirmPhotograph", { tempFilePath: this.data.tempFilePath });
       this.setData({
-        isTakingPhoto: false
+        isShowPhoto: false
       })
+
     },
     // 切换摄像头
     changeCamera() {
       this.setData({
         devicePosition: !this.data.devicePosition
       })
-
-      console.log(this.data.devicePosition)
-      console.log(this.data.devicePosition)
     }
   }
 })

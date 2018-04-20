@@ -1,8 +1,10 @@
 {
   "publicComponents": {
-    "list": "components/list/list",
     "dialog": "components/dialog/dialog",
-    "camera": "components/camera/camera"
+    "camera": "components/camera/camera",
+    "share-modal": "components/share-modal/share-modal",
+    "show-list": "components/show-list/show-list",
+    "banner-ad": "components/banner-ad/banner-ad"
   },
   "main": "index.js"
 }
